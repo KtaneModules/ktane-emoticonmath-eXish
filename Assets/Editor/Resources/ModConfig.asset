@@ -1,0 +1,37 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 615501dbe4f3fe94fbf4b564abb10237, type: 3}
+  m_Name: ModConfig
+  m_EditorClassIdentifier: 
+  id: emoticonMathModule
+  title: Emoticon Math
+  author: eXish, LeGeND
+  description: 'Decrypt a math problem encoded in emoticons.
+
+
+    Based on the module Emoji Math by Mock Army: https://steamcommunity.com/sharedfiles/filedetails/?id=729096093
+
+
+    HTML: https://ktane.timwi.de/HTML/Emoticon%20Math.html
+
+    PDF: https://ktane.timwi.de/PDF/Emoticon%20Math.pdf
+
+
+    Emoticon Math (emoticonMathModule) v1.0.0
+
+    Module and Idea by LeGeND
+
+    Mod Implemented by eXish
+
+    Twitch Plays supported'
+  version: 1.0.0
+  outputFolder: build
+  previewImage: {fileID: 2800000, guid: 74e95174dd716ec46a43b578b444cab2, type: 3}
