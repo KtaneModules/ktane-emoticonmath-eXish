@@ -14,7 +14,7 @@ MonoBehaviour:
   id: emoticonMathModule
   title: Emoticon Math
   author: eXish, LeGeND
-  description: 'Decrypt a math problem encoded in emoticons.
+  description: 'Decrypt a math problem encoded in modern emoticons.
 
 
     Based on the module Emoji Math by Mock Army: https://steamcommunity.com/sharedfiles/filedetails/?id=729096093
