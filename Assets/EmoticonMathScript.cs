@@ -26,22 +26,6 @@ public class EmoticonMathScript : MonoBehaviour
 		new string[] {"B", "C", "D"},
 		new string[] {"E", "F", "G" }
 	};
-	private readonly string[][] realEmojis = new string[][]
-	{
-		new string[] {"😂", "🍕", "👌"},
-		new string[] {"😄", "🍔", "🖖"},
-		new string[] {"😉", "🌭", "🤘"},
-		new string[] {"😎", "🍪", "🤞"},
-		new string[] {"😠", "🍭", "👍"},
-		new string[] {"😛", "🍉", "👎"},
-		new string[] {"😴", "🍦", "🤙"},
-		new string[] {"😆", "🍌", "👉"},
-		new string[] {"😀", "🍎", "👈"},
-		new string[] {"🙃", "🍫", "👊"},
-		new string[] {"💎", "🎮", "🎈"},
-		new string[] {"💣", "🔨", "🎸"},
-		new string[] {"💔", "👻", "💩" }
-	};
 	private float[] sizeVals = new float[] { 0.0032f, 0.0028f, 0.0023f };
 	private string generatedProblem;
 	private string input = "";
@@ -113,7 +97,6 @@ public class EmoticonMathScript : MonoBehaviour
 
 	void GenerateProblem()
 	{
-		string log = "";
 		int[] nums = new int[2];
 		nums[0] = UnityEngine.Random.Range(0, 100);
 		nums[1] = UnityEngine.Random.Range(0, 100);
@@ -122,35 +105,32 @@ public class EmoticonMathScript : MonoBehaviour
 		{
 			int rand = UnityEngine.Random.Range(0, 3);
 			generatedProblem += emojiNumbers[int.Parse(nums[0].ToString()[i].ToString())][rand];
-			log += realEmojis[int.Parse(nums[0].ToString()[i].ToString())][rand];
 		}
 		int rand2 = UnityEngine.Random.Range(0, 3);
 		generatedProblem += emojiNumbers[sign][rand2];
-		log += realEmojis[sign][rand2];
 		for (int i = 0; i < nums[1].ToString().Length; i++)
 		{
 			int rand = UnityEngine.Random.Range(0, 3);
 			generatedProblem += emojiNumbers[int.Parse(nums[1].ToString()[i].ToString())][rand];
-			log += realEmojis[int.Parse(nums[1].ToString()[i].ToString())][rand];
 		}
-		string log2;
+		string log;
 		switch (sign)
 		{
 			case 10:
 				answer = (nums[0] + nums[1]).ToString();
-				log2 = nums[0] + " + " + nums[1];
+				log = nums[0] + " + " + nums[1];
 				break;
 			case 11:
 				answer = (nums[0] - nums[1]).ToString();
-				log2 = nums[0] + " - " + nums[1];
+				log = nums[0] + " - " + nums[1];
 				break;
 			default:
 				answer = (nums[0] * nums[1]).ToString();
-				log2 = nums[0] + " * " + nums[1];
+				log = nums[0] + " * " + nums[1];
 				break;
 		}
-		Debug.LogFormat("[Emoticon Math #{0}] Puzzle on module: “{1}”", moduleId, log);
-		Debug.LogFormat("[Emoticon Math #{0}] Decoded puzzle: “{1}”", moduleId, log2);
+		Debug.LogFormat("[Emoticon Math #{0}] Puzzle on module: “{1}”", moduleId, generatedProblem);
+		Debug.LogFormat("[Emoticon Math #{0}] Decoded puzzle: “{1}”", moduleId, log);
 		Debug.LogFormat("[Emoticon Math #{0}] Expected answer: “{1}”", moduleId, answer);
 	}
 

@@ -5,3 +5,11 @@
   font-weight: 400;
   src: local('Special Elite'), local('SpecialElite-Regular'), url(../font/SpecialElite.ttf);
 }
+
+/* Emoji font */
+@font-face {
+    font-family: "Emoticons";
+    font-style: normal;
+    font-weight: normal;
+    src: url(../font/Emoticons.ttf);
+}
