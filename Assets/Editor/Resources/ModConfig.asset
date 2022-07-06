@@ -25,13 +25,13 @@ MonoBehaviour:
     PDF: https://ktane.timwi.de/PDF/Emoticon%20Math.pdf
 
 
-    Emoticon Math (emoticonMathModule) v1.0.1
+    Emoticon Math (emoticonMathModule) v1.0.2
 
     Module and Idea by LeGeND
 
     Mod Implemented by eXish
 
     Twitch Plays supported'
-  version: 1.0.1
+  version: 1.0.2
   outputFolder: build
   previewImage: {fileID: 2800000, guid: 74e95174dd716ec46a43b578b444cab2, type: 3}
